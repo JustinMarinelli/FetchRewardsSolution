@@ -13,6 +13,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -43,6 +44,8 @@ public class FetchActivity extends AppCompatActivity {
     private LinearLayout mDataContainer;
     // The FrameLayout that contains the center image
     private FrameLayout mCenterImageHolder;
+    // The button that allows us to fetch the data
+    private Button mFetchbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,7 @@ public class FetchActivity extends AppCompatActivity {
         mDataHeader = (LinearLayout)findViewById(R.id.dataHeader);
         mDataContainer = (LinearLayout)findViewById(R.id.dataContainer);
         mCenterImageHolder = (FrameLayout)findViewById(R.id.centerIDisplayHolder);
+        mFetchbutton = (Button)findViewById(R.id.fetchButton);
 
     }
 
@@ -69,6 +73,7 @@ public class FetchActivity extends AppCompatActivity {
         mWaitingBar.setVisibility(View.VISIBLE);
         mDataContainer.setVisibility(View.INVISIBLE);
         mDataHeader.setVisibility(View.INVISIBLE);
+        mFetchbutton.setEnabled(false);
         try {
             //JSONObject json = new JSONObject(readUrl());
             //String title = (String) json.get("title");
@@ -121,8 +126,6 @@ public class FetchActivity extends AppCompatActivity {
             row.addView(nameView);
 
             mDataContainer.addView(row);
-
-
         }
     }
 
@@ -229,6 +232,7 @@ public class FetchActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+            mFetchbutton.setEnabled(true);
         }
 
     }
