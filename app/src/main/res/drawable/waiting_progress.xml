@@ -1,0 +1,23 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="360"
+    android:interpolator="@android:anim/linear_interpolator">
+
+    <shape
+        android:innerRadiusRatio="3"
+        android:shape="ring"
+        android:thicknessRatio="8"
+        android:useLevel="false" >
+
+        <size
+            android:height="76dip"
+            android:width="76dip" />
+
+        <solid android:color="#300c39" />
+
+    </shape>
+
+
+</rotate>

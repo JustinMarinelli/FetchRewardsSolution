@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FetchRewardsSolution</string>
+    <string name="buttonFetch">Click here to fetch the data</string>
+    <string name="logoDesc">The Fetch Rewards logo</string>
+    <string name="fetchData">Click the button above to fetch data!</string>
+    <string name="id">ID</string>
+    <string name="listId">List ID</string>
+    <string name="name">Name</string>
+    <string name="centerImage">Fetch Rewards gift image</string>
+
+</resources>
